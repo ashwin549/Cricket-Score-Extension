@@ -1,0 +1,30 @@
+{
+    "name": "Live Cricket Score",
+    "version": "1.0",
+    "description": "Displays live cricket scores from Google as a screenshot.",
+    "manifest_version": 3,
+    "permissions": [
+      "storage",
+      "tabs",
+      "notifications",
+      "scripting"
+    ],
+    "host_permissions": [
+      "http://localhost:3000/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "48": "icon.png"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["screenshot.png"],
+        "matches": ["http://localhost:3000/*"]
+      }
+    ]
+}
